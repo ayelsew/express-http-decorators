@@ -1,8 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
-export type Method = 'get' | 'post' | 'patch' | 'delete';
-
-export enum MethodType {
+export enum Method {
   delete = 'delete',
   get = 'get',
   patch = 'patch',
