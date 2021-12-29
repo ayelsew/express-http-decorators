@@ -1,16 +1,5 @@
-import type { MethodParamters, Middleware } from '@/declarations';
-import { factory } from './factory';
+import { MethodParameters, MethodType } from '@/declarations';
+import Crud from './Crud';
 
-export function Put(methodParamters?: MethodParamters) {
-  let path: string;
-  let middleware: Middleware[];
-
-  if (typeof methodParamters === 'object' && methodParamters !== null) {
-    path = methodParamters.path;
-    middleware = methodParamters.middleware;
-  }
-
-  return factory('put', path, middleware);
-}
-
+const Put = (methodParamters?: MethodParameters) => Crud(MethodType.put, methodParamters);
 export default Put;

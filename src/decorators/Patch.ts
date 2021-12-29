@@ -1,16 +1,5 @@
-import type { MethodParamters, Middleware } from '@/declarations';
-import { factory } from './factory';
+import { MethodParameters, MethodType } from '@/declarations';
+import Crud from './Crud';
 
-export function Patch(methodParamters?: MethodParamters) {
-  let path: string;
-  let middleware: Middleware[];
-
-  if (typeof methodParamters === 'object' && methodParamters !== null) {
-    path = methodParamters.path;
-    middleware = methodParamters.middleware;
-  }
-
-  return factory('patch', path, middleware);
-}
-
+const Patch = (methodParamters?: MethodParameters) => Crud(MethodType.patch, methodParamters);
 export default Patch;

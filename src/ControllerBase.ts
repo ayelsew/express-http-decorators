@@ -1,12 +1,9 @@
 import { ControllerException } from '@/ControllerException';
-import type {
-  ResourceIdentifier,
-} from '@/declarations';
+import type {  ResourceIdentifier } from '@/declarations';
 
 export abstract class ControllerBase {
-  protected resourceName: string;
-
-  protected resourceIdentifier: ResourceIdentifier[];
+  protected resourceName: string = '';
+  protected resourceIdentifier: ResourceIdentifier[] = [];
 
   public getResourceName(): string {
     return this.resourceName;

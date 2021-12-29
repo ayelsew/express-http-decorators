@@ -1,16 +1,5 @@
-import type { MethodParamters, Middleware } from '@/declarations';
-import { factory } from './factory';
+import { MethodParameters, MethodType } from '@/declarations';
+import Crud from './Crud';
 
-export function Delete(methodParamters?: MethodParamters) {
-  let path: string;
-  let middleware: Middleware[];
-
-  if (typeof methodParamters === 'object' && methodParamters !== null) {
-    path = methodParamters.path;
-    middleware = methodParamters.middleware;
-  }
-
-  return factory('delete', path, middleware);
-}
-
+const Delete = (methodParamters?: MethodParameters) => Crud(MethodType.delete, methodParamters);
 export default Delete;

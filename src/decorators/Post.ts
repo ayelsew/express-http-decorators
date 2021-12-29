@@ -1,16 +1,5 @@
-import type { MethodParamters, Middleware } from '@/declarations';
-import { factory } from './factory';
+import { MethodParameters, MethodType } from '@/declarations';
+import Crud from './Crud';
 
-export function Post(methodParamters?: MethodParamters) {
-  let path: string;
-  let middleware: Middleware[];
-
-  if (typeof methodParamters === 'object' && methodParamters !== null) {
-    path = methodParamters.path;
-    middleware = methodParamters.middleware;
-  }
-
-  return factory('post', path, middleware);
-}
-
+const Post = (methodParamters?: MethodParameters) => Crud(MethodType.post, methodParamters);
 export default Post;
