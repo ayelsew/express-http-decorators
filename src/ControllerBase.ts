@@ -2,8 +2,8 @@ import { ControllerException } from './ControllerException';
 import type {  ResourceIdentifier } from './declarations';
 
 export abstract class ControllerBase {
-  public resourceName: string = '';
-  public resourceIdentifier: ResourceIdentifier[] = [];
+  protected resourceName: string = '';
+  protected resourceIdentifier: ResourceIdentifier[] = [];
 
   public getResourceName(): string {
     return this.resourceName;
