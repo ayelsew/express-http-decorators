@@ -1,4 +1,4 @@
-import { Method, MethodParameters } from '@/declarations';
+import { Method, MethodParameters } from '../declarations';
 import { HTTPFactory } from './HTTPFactory';
 
 export const Post = (methodParameters?: MethodParameters) => HTTPFactory(Method.post, methodParameters);

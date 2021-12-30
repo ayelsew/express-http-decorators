@@ -1,4 +1,4 @@
-import type { Method, MethodParameters, Middleware } from '@/declarations';
+import type { Method, MethodParameters, Middleware } from '../declarations';
 import { factory } from './factory';
 
 export function HTTPFactory(name: Method, methodParameters?: MethodParameters) {

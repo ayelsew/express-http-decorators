@@ -1,8 +1,8 @@
 import type { Router } from 'express';
-import type { ControllerBase } from '@/ControllerBase';
-import type { ResourceIdentifier } from '@/declarations';
+import type { ControllerBase } from './ControllerBase';
+import type { ResourceIdentifier } from './declarations';
 
-import { ControllerException } from '@/ControllerException'
+import { ControllerException } from './ControllerException'
 
 export function autoloader(controllers: ControllerBase[], router: Router): Router {
 
@@ -11,7 +11,7 @@ export function autoloader(controllers: ControllerBase[], router: Router): Route
     const resoruceIdentifier: ResourceIdentifier[] = [];
 
     try {
-      controller = new controllers[ControllerName]();
+      controller = controllers[ControllerName]();
     } catch (error) {
       throw new ControllerException(error);
     }

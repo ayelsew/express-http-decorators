@@ -1,5 +1,5 @@
-import { ControllerException } from '@/ControllerException';
-import type {  ResourceIdentifier } from '@/declarations';
+import { ControllerException } from './ControllerException';
+import type {  ResourceIdentifier } from './declarations';
 
 export abstract class ControllerBase {
   protected resourceName: string = '';
