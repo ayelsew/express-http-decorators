@@ -9,6 +9,7 @@
     "esModuleInterop": true,
     "module": "CommonJS",
     "emitDecoratorMetadata": true,
+    "target": "ES5",
     "experimentalDecorators": true,
     "resolveJsonModule": true,
     "preserveConstEnums": true,
