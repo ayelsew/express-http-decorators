@@ -25,6 +25,7 @@ export class Example extends ControllerBase {
 
 export default Example;
 ```
+
 ```ts
 // Express app example
 
