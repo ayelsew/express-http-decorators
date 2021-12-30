@@ -1,19 +1,23 @@
 import type { Router } from 'express';
-import type { ControllerBase } from './ControllerBase';
+import { ControllerBase } from './ControllerBase';
 import type { ResourceIdentifier } from './declarations';
 
-import { ControllerException } from './ControllerException'
+import AutoloaderException from './AutoloaderException'
 
-export function autoloader(controllers: ControllerBase[], router: Router): Router {
+export function autoloader<T>(controllers: Array<T>, router: Router): Router {
 
   Object.keys(controllers).forEach((ControllerName: string) => {
     let controller: ControllerBase;
     const resoruceIdentifier: ResourceIdentifier[] = [];
 
+    if (!(controllers[ControllerName].prototype instanceof  ControllerBase)){
+      throw new AutoloaderException(`The class ${controllers[ControllerName].name} isn't instanceof ControllerBase`)
+    }
+    
     try {
-      controller = controllers[ControllerName]();
+      controller = controllers[ControllerName].prototype;
     } catch (error) {
-      throw new ControllerException(error);
+      throw new AutoloaderException(error);
     }
 
     resoruceIdentifier.push(...controller.getAllResourceIdentifier())
@@ -30,7 +34,7 @@ export function autoloader(controllers: ControllerBase[], router: Router): Route
       try {
         router[method](newPath, middleware, controller[name]);
       } catch (error) {
-        throw new ControllerException(error);
+        throw new AutoloaderException(error);
       }
     });
   });
