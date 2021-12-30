@@ -5,6 +5,7 @@
     "rootDir": "src",
     "baseUrl": "./src",
     "allowJs": true,
+    "target": "ES6",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "module": "CommonJS",
