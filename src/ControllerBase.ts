@@ -1,5 +1,4 @@
-import { ControllerException } from './ControllerException';
-import type {  ResourceIdentifier } from './declarations';
+import type { ResourceIdentifier } from './declarations';
 
 export abstract class ControllerBase {
   protected resourceName: string = '';
@@ -14,9 +13,14 @@ export abstract class ControllerBase {
   }
 
   public getResourceIdentifier(index: number): ResourceIdentifier | undefined {
-    if (!Number.isInteger(index)) throw new ControllerException(`The index must be a real integer, but was given ${index} type ${typeof index}`);
+    if (index >= 0 && index <= (this.resourceIdentifier.length - 1))
+      return this.resourceIdentifier[index]
 
-    return this.resourceIdentifier ? this.resourceIdentifier[index] : undefined;
+    return undefined;
+  }
+
+  public setResourceIdentifier(item: ResourceIdentifier): void {
+    this.resourceIdentifier.push(item);
   }
 }
 

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60.86% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>14/23</span>
+                <span class='fraction'>27/27</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60.86% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>14/23</span>
+                <span class='fraction'>27/27</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -86,49 +86,61 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { ControllerException } from './ControllerException';
-import type {  ResourceIdentifier } from './declarations';
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import type { ResourceIdentifier } from './declarations';
 &nbsp;
 export abstract class ControllerBase {
-  protected <span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >resourceName: string = '';</span></span>
-<span class="cstat-no" title="statement not covered" >  protected resourceIdentifier: ResourceIdentifier[] = [];</span>
+  protected resourceName: string = '';
+  protected resourceIdentifier: ResourceIdentifier[] = [];
 &nbsp;
-  public <span class="fstat-no" title="function not covered" >getResourceName(): string {</span>
-<span class="cstat-no" title="statement not covered" >    return this.resourceName;</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+  public getResourceName(): string {
+    return this.resourceName;
+  }
 &nbsp;
-  public <span class="fstat-no" title="function not covered" >getAllResourceIdentifier(): ResourceIdentifier[] {</span>
-<span class="cstat-no" title="statement not covered" >    return this.resourceIdentifier;</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+  public getAllResourceIdentifier(): ResourceIdentifier[] {
+    return this.resourceIdentifier;
+  }
 &nbsp;
-  public <span class="fstat-no" title="function not covered" >getResourceIdentifier(index: number): ResourceIdentifier | undefined {</span>
-<span class="cstat-no" title="statement not covered" >    if (!Number.isInteger(index)) throw new ControllerException(`The index must be a real integer, but was given ${index} type ${typeof index}`);</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    return this.resourceIdentifier ? this.resourceIdentifier[index] : undefined;</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+  public getResourceIdentifier(index: number): ResourceIdentifier | undefined {
+    if (index &gt;= 0 &amp;&amp; index &lt;= (this.resourceIdentifier.length - 1))
+      return this.resourceIdentifier[index]
+&nbsp;
+    return undefined;
+  }
+&nbsp;
+  public setResourceIdentifier(item: ResourceIdentifier): void {
+    this.resourceIdentifier.push(item);
+  }
 }
 &nbsp;
 export default ControllerBase;
@@ -139,7 +151,7 @@ export default ControllerBase;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Sat Jan 01 2022 16:51:34 GMT-0300 (Brasilia Standard Time)
+                at Sat Jan 01 2022 18:20:31 GMT-0300 (Brasilia Standard Time)
             </div>
         <script src="prettify.js"></script>
         <script>

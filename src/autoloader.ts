@@ -24,7 +24,7 @@ export function autoloader<T>(controllers: Array<T>, router: Router): Router {
 
       const newPath: string = `/${controller.getResourceName()}${path}`;
 
-      console.log(`${method.toUpperCase()} ${name} ${newPath}`);
+      // console.log(`${method.toUpperCase()} ${name} ${newPath}`);
 
       try {
         router[method](newPath, middleware, controller[name]);
