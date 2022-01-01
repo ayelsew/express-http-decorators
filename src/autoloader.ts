@@ -5,20 +5,15 @@ import type { ResourceIdentifier } from './declarations';
 import AutoloaderException from './AutoloaderException'
 
 export function autoloader<T>(controllers: Array<T>, router: Router): Router {
-
   Object.keys(controllers).forEach((ControllerName: string) => {
     let controller: ControllerBase;
     const resoruceIdentifier: ResourceIdentifier[] = [];
 
-    if (!(controllers[ControllerName].prototype instanceof  ControllerBase)){
+    if (!(controllers[ControllerName].prototype instanceof ControllerBase)) {
       throw new AutoloaderException(`The class ${controllers[ControllerName].name} isn't instanceof ControllerBase`)
     }
-    
-    try {
-      controller = controllers[ControllerName].prototype;
-    } catch (error) {
-      throw new AutoloaderException(error);
-    }
+
+    controller = controllers[ControllerName].prototype;
 
     resoruceIdentifier.push(...controller.getAllResourceIdentifier())
 
