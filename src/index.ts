@@ -1,3 +1,4 @@
 export * from './ControllerBase';
-export * from './decorators';
+export * from './decorators/methods';
+export * from './decorators/Controller';
 export * from './autoloader';

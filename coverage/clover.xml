@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1641082573187" clover="3.2.0">
-  <project timestamp="1641082573187" name="All files">
-    <metrics statements="159" coveredstatements="158" conditionals="58" coveredconditionals="44" methods="19" coveredmethods="14" elements="236" coveredelements="216" complexity="0" loc="159" ncloc="159" packages="2" files="9" classes="9"/>
+<coverage generated="1641145724718" clover="3.2.0">
+  <project timestamp="1641145724718" name="All files">
+    <metrics statements="157" coveredstatements="157" conditionals="52" coveredconditionals="43" methods="18" coveredmethods="18" elements="227" coveredelements="218" complexity="0" loc="157" ncloc="157" packages="2" files="9" classes="9"/>
     <package name="src">
-      <metrics statements="101" coveredstatements="101" conditionals="34" coveredconditionals="27" methods="9" coveredmethods="9"/>
+      <metrics statements="102" coveredstatements="102" conditionals="41" coveredconditionals="32" methods="10" coveredmethods="10"/>
       <file name="AutoloaderException.ts" path="/home/ayelsew/Desktop/express-decorator/src/AutoloaderException.ts">
         <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
@@ -24,12 +24,12 @@
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="16" count="3" type="cond" truecount="1" falsecount="0"/>
@@ -115,14 +115,15 @@
         <line num="23" count="1" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/ayelsew/Desktop/express-decorator/src/index.ts">
-        <metrics statements="3" coveredstatements="3" conditionals="19" coveredconditionals="12" methods="3" coveredmethods="3"/>
+        <metrics statements="4" coveredstatements="4" conditionals="26" coveredconditionals="17" methods="4" coveredmethods="4"/>
         <line num="1" count="2" type="cond" truecount="5" falsecount="2"/>
-        <line num="2" count="2" type="cond" truecount="2" falsecount="3"/>
-        <line num="3" count="4" type="cond" truecount="5" falsecount="2"/>
+        <line num="2" count="1" type="cond" truecount="2" falsecount="3"/>
+        <line num="3" count="1" type="cond" truecount="5" falsecount="2"/>
+        <line num="4" count="4" type="cond" truecount="5" falsecount="2"/>
       </file>
     </package>
     <package name="src.decorators">
-      <metrics statements="58" coveredstatements="57" conditionals="24" coveredconditionals="17" methods="10" coveredmethods="5"/>
+      <metrics statements="55" coveredstatements="55" conditionals="11" coveredconditionals="11" methods="8" coveredmethods="8"/>
       <file name="Controller.ts" path="/home/ayelsew/Desktop/express-decorator/src/decorators/Controller.ts">
         <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
@@ -155,43 +156,40 @@
         <line num="16" count="1" type="stmt"/>
       </file>
       <file name="factory.ts" path="/home/ayelsew/Desktop/express-decorator/src/decorators/factory.ts">
-        <metrics statements="22" coveredstatements="22" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <metrics statements="22" coveredstatements="22" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
+        <line num="4" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
       </file>
-      <file name="index.ts" path="/home/ayelsew/Desktop/express-decorator/src/decorators/index.ts">
-        <metrics statements="11" coveredstatements="10" conditionals="18" coveredconditionals="12" methods="7" coveredmethods="2"/>
+      <file name="methods.ts" path="/home/ayelsew/Desktop/express-decorator/src/decorators/methods.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="5" coveredconditionals="5" methods="5" coveredmethods="5"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
+        <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="7" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="0" type="cond" truecount="5" falsecount="3"/>
-        <line num="11" count="1" type="cond" truecount="6" falsecount="3"/>
+        <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
       </file>
     </package>
   </project>

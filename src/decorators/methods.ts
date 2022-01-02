@@ -6,6 +6,3 @@ export function Patch(methodParameters?: MethodParameters) { return HTTPFactory(
 export function Delete(methodParameters?: MethodParameters) { return HTTPFactory(Method.delete, methodParameters); }
 export function Get(methodParameters?: MethodParameters) { return HTTPFactory(Method.get, methodParameters); }
 export function Put(methodParameters?: MethodParameters) { return HTTPFactory(Method.put, methodParameters); }
-
-export * from './factory';
-export * from './Controller';

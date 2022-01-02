@@ -5,7 +5,7 @@ export function HTTPFactory(name: Method, methodParameters?: MethodParameters) {
   let path: string = '';
   let middleware: Middleware[] = [];
   
-  if (typeof methodParameters === 'object' && methodParameters !== null) {
+  if (methodParameters) {
     path = methodParameters.path;
     middleware = methodParameters.middleware;
   }
