@@ -1,20 +1,19 @@
 import type { Router } from 'express';
-import type { ControllerBase } from '@/ControllerBase';
-import type { ResourceIdentifier } from '@/declarations';
+import { ControllerBase } from './ControllerBase';
+import type { ResourceIdentifier } from './declarations';
 
-import { ControllerException } from '@/ControllerException'
+import AutoloaderException from './AutoloaderException'
 
-export function autoloader(controllers: ControllerBase[], router: Router): Router {
-
+export function autoloader<T>(controllers: Array<T>, router: Router, verbose: (identifier: ResourceIdentifier) => void = () => {}): Router {
   Object.keys(controllers).forEach((ControllerName: string) => {
     let controller: ControllerBase;
     const resoruceIdentifier: ResourceIdentifier[] = [];
 
-    try {
-      controller = new controllers[ControllerName]();
-    } catch (error) {
-      throw new ControllerException(error);
+    if (!(controllers[ControllerName].prototype instanceof ControllerBase)) {
+      throw new AutoloaderException(`The class ${controllers[ControllerName].name} isn't instanceof ControllerBase`)
     }
+
+    controller = controllers[ControllerName].prototype;
 
     resoruceIdentifier.push(...controller.getAllResourceIdentifier())
 
@@ -24,13 +23,15 @@ export function autoloader(controllers: ControllerBase[], router: Router): Route
       } = identifier;
 
       const newPath: string = `/${controller.getResourceName()}${path}`;
-
-      console.log(`${method.toUpperCase()} ${name} ${newPath}`);
+      verbose({
+        ...identifier,
+        path: newPath
+      });
 
       try {
         router[method](newPath, middleware, controller[name]);
       } catch (error) {
-        throw new ControllerException(error);
+        throw new AutoloaderException(error);
       }
     });
   });

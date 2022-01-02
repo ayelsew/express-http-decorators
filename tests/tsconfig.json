@@ -1,9 +1,7 @@
 {
   "compilerOptions": {
-    "sourceMap": true,
     "outDir": "dist",
-    "rootDir": "src",
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "allowJs": true,
     "target": "ES6",
     "moduleResolution": "node",
@@ -14,19 +12,8 @@
     "resolveJsonModule": true,
     "preserveConstEnums": true,
     "allowSyntheticDefaultImports": true,
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
   },
   "include": [
-    "src/**/*",
-    "src/**/*.json"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.test.ts",
-    "jest.config.js"
+    "**/*"
   ]
 }
