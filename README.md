@@ -68,5 +68,12 @@ Decorator for class controller. The class controller aways must be extends `Cont
  - 3) `npm link && npm link express-decorator` To link this project as module in node_modules directory
  - 4) `npm run dev` To run code in example directory
 
+## Founders
+- [ayelsew](https://github.com/ayelsew)
+- [AyAyEm](https://github.com/AyAyEm)
+- [RenanLopes77](https://github.com/RenanLopes77)
+- [freirezinho](https://github.com/freirezinho)
+
+ 
 # License
 [MIT](/LICENSE)

@@ -68,5 +68,11 @@ Decorator para classe controller. A classe controller sempre deve extender `Cont
  - 3) `npm link && npm link express-decorator` Para criar referência desse projeto como módulo no diretório node_modules
  - 4) `npm run dev` Para executar o código no diretório example
 
+## Fundadores
+- [ayelsew](https://github.com/ayelsew)
+- [AyAyEm](https://github.com/AyAyEm)
+- [RenanLopes77](https://github.com/RenanLopes77)
+- [freirezinho](https://github.com/freirezinho)
+
 # Licença
 [MIT](/LICENSE)
