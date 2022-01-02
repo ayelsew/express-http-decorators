@@ -2,6 +2,8 @@
 
 Decorator typescript for express controlers/router
 
+If you don't known about HTTP methods see [HTTP request methods at MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+
 ## How to use
 
 ```ts
@@ -10,14 +12,14 @@ Decorator typescript for express controlers/router
 import { Request, Response } from 'express'
 import { ControllerBase, Controller, Get } from 'express-decorator';
 
-@Controller(/* 'Example' Name here is optional*/)
+@Controller() // /example
 export class Example extends ControllerBase {
-    @Get({ path: '/world' })
+    @Get({ path: '/world' }) // /example/world
     world(request: Request, response: Response) {
         response.send('Hello World');
     }
 
-    @Post({ path: '/hello' })
+    @Post({ path: '/hello' }) // /example/hello
     hello(request: Request, response: Response) {
         response.send('Hello World');
     }
@@ -42,6 +44,22 @@ app.listen(8888, () => {
 })
 
 ```
+
+## Functions
+
+Function to load and make endpoint
+- `autoloader(array: Array<class extends ControlerBase>, router: Express.Router, verbose: (ResourceIdentifier) => void): Express.Router`: This function recives an array of class `"controller"` that extends `ControlerBase` and bind to router of express  
+    - `array: Array<class extends ControlerBase>`: Array of class that extends `ControllerBase`  
+    - `router: Express.Router`: The router of express  
+    - `verbose: (ResourceIdentifier) => void`: Function callback that is call every new endpoint binded to router (for debug)
+
+HTTP methods decorators available: `Post`, `Get`, `Put`, `Patch`, `Delete`
+- `@<decorator name>(methodParameters?: MethodParameters)`: With this decorator you can make a method at class as endpoint
+    - `MethodParameters.path`: Custom name to endpoint, if not setted, will be the name of class method
+    - `MethodParameters.middleware`: Array of middlewares express
+
+Decorator for class controller. The class controller aways must be extends `ControllerBase`.
+- `@Controller(name?: string)`: This decorator defines the base name to endpoint see example above, if not setted, will be the name of class
 
 ## For development or test
 
