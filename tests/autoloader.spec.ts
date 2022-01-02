@@ -1,6 +1,5 @@
 import { Router } from 'express'
-import { ControllerBase } from '../src';
-import autoloader from '../src/autoloader';
+import { ControllerBase, autoloader } from '../src';
 import { Method } from '../src/declarations';
 
 import Example from './__mocks__/controller'

@@ -1,8 +1,8 @@
 import type { ResourceIdentifier } from './declarations';
 
 export abstract class ControllerBase {
-  protected resourceName: string = '';
-  protected resourceIdentifier: ResourceIdentifier[] = [];
+  protected resourceName: string;
+  protected resourceIdentifier: ResourceIdentifier[];
 
   public getResourceName(): string {
     return this.resourceName;
@@ -19,8 +19,8 @@ export abstract class ControllerBase {
     return undefined;
   }
 
-  public setResourceIdentifier(item: ResourceIdentifier): void {
-    this.resourceIdentifier.push(item);
+  public setResourceIdentifier(items: ResourceIdentifier[]): void {
+    this.resourceIdentifier = items;
   }
 }
 
