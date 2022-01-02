@@ -1,3 +1,5 @@
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/ayelsew/express-decorator.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ayelsew/express-decorator/alerts/)
+
 # express-decorator
 
 Decorator typescript para express controlers/router
