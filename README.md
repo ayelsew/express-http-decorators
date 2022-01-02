@@ -1,3 +1,6 @@
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/ayelsew/express-decorator.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ayelsew/express-decorator/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/ayelsew/express-decorator.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ayelsew/express-decorator/context:javascript)
+
 # express-decorator
 
 Decorator typescript for express controlers/router
@@ -68,5 +71,12 @@ Decorator for class controller. The class controller aways must be extends `Cont
  - 3) `npm link && npm link express-decorator` To link this project as module in node_modules directory
  - 4) `npm run dev` To run code in example directory
 
+## Founders
+- [ayelsew](https://github.com/ayelsew)
+- [AyAyEm](https://github.com/AyAyEm)
+- [RenanLopes77](https://github.com/RenanLopes77)
+- [freirezinho](https://github.com/freirezinho)
+
+ 
 # License
 [MIT](/LICENSE)

@@ -1,3 +1,6 @@
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/ayelsew/express-decorator.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ayelsew/express-decorator/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/ayelsew/express-decorator.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ayelsew/express-decorator/context:javascript)
+
 # express-decorator
 
 Decorator typescript para express controlers/router
@@ -67,6 +70,12 @@ Decorator para classe controller. A classe controller sempre deve extender `Cont
  - 2) `npm install` Para instalar as dependências
  - 3) `npm link && npm link express-decorator` Para criar referência desse projeto como módulo no diretório node_modules
  - 4) `npm run dev` Para executar o código no diretório example
+
+## Fundadores
+- [ayelsew](https://github.com/ayelsew)
+- [AyAyEm](https://github.com/AyAyEm)
+- [RenanLopes77](https://github.com/RenanLopes77)
+- [freirezinho](https://github.com/freirezinho)
 
 # Licença
 [MIT](/LICENSE)
