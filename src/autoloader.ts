@@ -4,7 +4,7 @@ import type { ResourceIdentifier } from './declarations';
 
 import AutoloaderException from './AutoloaderException'
 
-export function autoloader<T>(controllers: Array<T>, router: Router): Router {
+export function autoloader<T>(controllers: Array<T>, router: Router, verbose: (identifier: ResourceIdentifier) => void = () => {}): Router {
   Object.keys(controllers).forEach((ControllerName: string) => {
     let controller: ControllerBase;
     const resoruceIdentifier: ResourceIdentifier[] = [];
@@ -23,8 +23,10 @@ export function autoloader<T>(controllers: Array<T>, router: Router): Router {
       } = identifier;
 
       const newPath: string = `/${controller.getResourceName()}${path}`;
-
-      // console.log(`${method.toUpperCase()} ${name} ${newPath}`);
+      verbose({
+        ...identifier,
+        path: newPath
+      });
 
       try {
         router[method](newPath, middleware, controller[name]);
