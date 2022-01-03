@@ -1,5 +1,5 @@
 import express, { Router } from 'express';
-import { autoloader } from 'express-decorator';
+import { autoloader } from 'express-http-decorators';
 import Example from './controllers/Example';
 
 const app = express();
@@ -10,5 +10,5 @@ app.use(autoloader([Example], Router(), (data) => {
 }))
 
 app.listen(8888, () => {
-  console.log('Express decorator on air at 127.0.0.1:8888')
+  console.log('Express http decorator on air at 127.0.0.1:8888')
 })

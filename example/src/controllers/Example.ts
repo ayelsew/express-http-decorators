@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { ControllerBase, Controller, Get, Post } from 'express-decorator';
+import { ControllerBase, Controller, Get, Post } from 'express-http-decorators';
 
 @Controller()
 export class Example extends ControllerBase {
